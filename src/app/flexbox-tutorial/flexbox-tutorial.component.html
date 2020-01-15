@@ -1,6 +1,5 @@
 <div class='wrapper'>
   <section class='child' id='intro'>
-
     <div>
       <div class='logo'>
         <div class='line columns'>
@@ -19,7 +18,7 @@
         <div class='animation'></div>
       </div>
       <h1>
-        Flexbox & Position <br> Workshop
+        Flexbox Tutorial <br> Workshop
       </h1>
       <h2>
         Luizero
@@ -36,30 +35,952 @@
           <h1>
             O que é flexbox e quando utilizar?
           </h1>
-          <!-- <h2>
-                  Luizero
-                </h2> -->
           <p>
             O módulo Flexbox é uma recomendação da W3C - é a principal organização de padronização da World Wide Web
-            (WWW) - desde outubro de 2017 e atualmente é utilizado em maior parte dos navegadores modernos, porém, sendo apenas
-            parcialmente usado no IE9 e I10. Sua taxa de uso nos <strong>navegadores é de 98% de implementação </strong> -
+            (WWW) - desde outubro de 2017 e atualmente é utilizado em maior parte dos navegadores modernos, porém, sendo
+            apenas
+            parcialmente usado no IE9 e I10. Sua taxa de uso nos <strong>navegadores é de 98% de implementação </strong>
+            -
             enquanto o "grid layout" bate os 93%.
           </p>
         </div>
       </div>
       <div class='columns'>
         <div class='column is-10'>
-            <q cite='https://medium.com/@lucashenriquedeabreu/flexbox-layout-a2ab0f0a2f86'>
-                Flexbox tem por objetivo fornecer uma forma mais fácil e objetiva de alinhar e distribuir os objetos dentro de um container, sempre levando em consideração que o tamanho pode ser ou não desconhecido.
-            </q>
-                <span>
-                  Lucas Henrique de Abreu
-                </span>
+          <q cite='https://medium.com/@lucashenriquedeabreu/flexbox-layout-a2ab0f0a2f86'>
+            Flexbox tem por objetivo fornecer uma forma mais fácil e objetiva de alinhar e distribuir os objetos dentro
+            de um container, sempre levando em consideração que o tamanho pode ser ou não desconhecido.
+          </q>
+          <span>
+            Lucas Henrique de Abreu
+          </span>
         </div>
         <div class='column is-2'>
-            <i class="fab fa-medium"></i>
+          <i class="fab fa-medium"></i>
         </div>
       </div>
     </div>
   </section>
+  <section class='child'>
+    <div class='container'>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h1>
+            Pera aí, então devo usar sempre FlexBox?
+          </h1>
+          <h2>
+            FlexBox VS CSS Grid
+          </h2>
+          <p>
+            A maior "rixa" que existe é entre os desenvolvedores é se o FlexBox deve ser ou não substituído pelo CSS
+            Grid, porém:
+          </p>
+          <ul>
+            <li> FlexBox faz coisas que o CSS Grid não pode fazer </li>
+            <li> CSS Grid faz coisas que o FlexBox não pode </li>
+            <li> Ambos podem trabalhar em conjunto </li>
+            <li> Há coisas que ambos podem fazer, mas que um faz de uma maneira mais rápida e simples </li>
+          </ul>
+        </div>
+      </div>
+      <div class='columns vs'>
+        <div class='column is-5'>
+          <h3>
+            FlexBox
+          </h3>
+          <p>
+            Claro que podemos usar o flexbox para trabalhar com elementos em duas dimensões, mas flexbox é mais bem
+            utilizado quando estamos trabalhando com elementos em apenas uma dimensão, seja linha ou coluna.
+
+            Um bom exemplo é quando criamos um menu, seja ele vertical ou horizontal, ideal para alinhar elementos,
+            não importa a direção.
+          </p>
+        </div>
+        <div class='column is-5'>
+          <h3>
+            Grid
+          </h3>
+          <p>
+            Claro que podemos usar o Grid para trabalhar com elementos em uma única dimensão, mas ele é ótimo quando
+            estamos trabalhando com elementos em duas dimensões, principalmente para definir a estrutura de uma
+            página, o que seria muito mais difícil com FlexBox.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='child'>
+    <div class='container'>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h1>
+            Exemplos
+          </h1>
+          <div class='columns example'>
+            <div class='column is-4'>
+              <h2>
+                FlexBox
+              </h2>
+              <code>
+                .menu {{ '{' }} <br>
+                width: 80%; <br>
+                display: flex; <br>
+                justify-content: space-between; <br>
+                margin: 10px auto; <br>
+
+                <span>li {{ '{' }} <br>
+                  padding: 10px; <br>
+                  background-color: #a8577e; <br>
+                  flex: 1; <br>
+                  text-align: center; <br>
+                  {{ '}' }} <br> </span>
+                {{ '}' }} <br>
+              </code>
+            </div>
+            <div class='column is-8'>
+              <ul class='menu'>
+                <li> DevMagic </li>
+                <li> Projetos </li>
+                <li> Sobre a DevMagic </li>
+                <li> Contato </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class='child'>
+    <div class='container'>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h1>
+            Exemplos
+          </h1>
+          <div class='columns example'>
+            <div class='column is-4'>
+              <h2>
+                CSS Grid
+              </h2>
+              <code>
+                .container {{ '{' }} <br>
+                display: grid; <br>
+                grid-template-columns: 200px auto;<br>
+                grid-template-rows: 30px 100px 30px; <br>
+                grid-template-areas: "header header" "aside main" "footer footer"; <br>
+                <span>
+
+                  .header {{ '{' }} <br>
+                  background-color: darkred; <br>
+                  grid-area: header; <br>
+                  {{ '}' }} <br>
+
+                  .aside{{ '{' }} <br>
+                  background-color: darkgreen; <br>
+                  grid-area: aside; <br>
+                  {{ '}' }}<br>
+
+                  .main{{ '{' }} <br>
+                  background-color: darkorange; <br>
+                  grid-area: main; <br>
+                  height: 200px; <br>
+                  {{ '}' }}<br>
+
+                  .footer{{ '{' }} <br>
+                  background-color: darkblue; <br>
+                  grid-area: footer; <br>
+                  {{ '}' }}<br>
+                </span>
+                {{ '}' }}
+              </code>
+            </div>
+            <div class='column is-8 container'>
+              <div class='header'></div>
+              <div class='aside'></div>
+              <div class='main'></div>
+              <div class='footer'></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class='child'>
+    <div class='container'>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h1>
+            E framework, qual utilizar?
+          </h1>
+          <h2>
+            Recomendação
+          </h2>
+          <p>
+            Uma framework inteiramente baseada em Flexbox, com responsividade e leve. Consiste em arquivos de SASS que
+            você
+            pode optar em importar individualmente ou como um conjunto. Bulma funciona muito bem com os navegadores
+            modernos,
+            com exceção do Internet Explorer - leve isso em consideração ao fazer seu projeto.
+          </p>
+        </div>
+      </div>
+      <div class='columns'>
+        <div class='column is-8'>
+          <q>
+            Bulma is a free, open source CSS framework based on Flexbox and used by more than 200,000 developers.
+          </q>
+        </div>
+        <div class='column is-4'>
+          <h3>
+            Links recomendáveis
+          </h3>
+          <ul>
+            <a href='https://bulma.io' title='Visitar site oficial'>
+              <li> Site oficial </li>
+            </a>
+            <a href='https://www.npmjs.com/package/bulma' title='Visitar NPMJS Bulma'>
+              <li> NPM Bulma </li>
+            </a>
+            <a href='https://bulmatemplates.github.io/bulma-templates/' title='Conferir templates já feitos'>
+              <li> Templates </li>
+            </a>
+            <a href='https://github.com/jgthms/bulma/releases/download/0.8.0/bulma-0.8.0.zip'
+              title='Baixar versão do Bulma (v0.8.0)'>
+              <li> Baixar versão </li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class='child' id='examples'>
+    <div>
+      <div class='logo'>
+        <div class='line columns'>
+          <div class='column is-4'></div>
+          <div class='column is-4'></div>
+          <div class='column is-4'></div>
+        </div>
+        <div class='line columns'>
+          <div class='column is-8'></div>
+          <div class='column is-3'></div>
+        </div>
+        <div class='line columns'>
+          <div class='column is-3'></div>
+          <div class='column is-8'></div>
+        </div>
+        <div class='animation'></div>
+      </div>
+      <h1>
+        Exemplos de Uso
+      </h1>
+      <h2>
+        Como utilizar os estilos para organizar elementos
+      </h2>
+    </div>
+  </section>
+  <section class='child examples'>
+    <div class='container'>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h1>
+            Como utilizar
+          </h1>
+          <h2>
+            Noções básicas
+          </h2>
+          <p>
+            Flexbox é um módulo inteiro e não apenas uma única propriedade, por isso, envolve um conjunto de
+            propriedades. Essas propriedades normalmente setamos para o elementos pai do contexto que queremos atuar com
+            flexbox. Para isso, usamos a propriedade Display, que define se um container é flexível, inline ou bloqueado
+            (que é o padrão de todo elemento de bloco)
+          </p>
+        </div>
+      </div>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h2>
+            O que são elementos de bloco?
+          </h2>
+          <p>
+            Elementos bloco ocupam todo o espaço horizontal disponível e iniciam uma nova linha no documento. Novos
+            elementos irão começar na próxima linha livre.
+          </p>
+          <ul>
+            <li>div (division, ou divisão, tag bloco genérica)</li>
+            <li>h1 até h6 (títulos)</li>
+            <li>p (parágrafo)</li>
+            <li>blockquote (citação em bloco)</li>
+            <li>ul (lista não ordenada)</li>
+            <li>ol (lista ordenada)</li>
+            <li>form (para formulários)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='child examples display'>
+    <div class='container'>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h1>
+            Display
+          </h1>
+          <h2>
+            Definir um container como flexível
+          </h2>
+        </div>
+      </div>
+      <div class='columns'>
+        <div class='column is-5'>
+          <h2>Flexbox</h2>
+        </div>
+        <div class='column is-5'>
+          <h2>Default</h2>
+        </div>
+      </div>
+      <div class='columns'>
+        <div class='column is-5 flex'>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class='column is-5 default'>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class='child examples flex-direction'>
+    <div class='container'>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h1>
+            flex-direction
+          </h1>
+          <h2>
+            Estabelece a ordem que os itens serão dispostos (verticalmente ou horizontalmente)
+          </h2>
+        </div>
+      </div>
+      <div class='columns show-examples'>
+        <div class='column is-3'>
+          <h3>
+            row
+          </h3>
+          "Padrão", conteúdo em linha da esquerda para direita.
+          <div class='example-content row'>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+          </div>
+        </div>
+        <div class='column is-3'>
+          <h3>
+            row-reverse
+          </h3>
+          <p>
+            Conteúdo em linha invertido, da direita para esquerda.
+          </p>
+          <div class='example-content row-reverse'>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+          </div>
+        </div>
+        <div class='column is-3'>
+          <h3>
+            column
+          </h3>
+          <p>
+            Conteúdo em coluna, na ordem de origem
+          </p>
+          <div class='example-content column'>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+          </div>
+        </div>
+        <div class='column is-3'>
+          <h3>
+            column-reverse
+          </h3>
+          <p>
+            Conteúdo em coluna, invertendo a ordem de origem
+          </p>
+          <div class='example-content column-reverse'>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='child examples flex-wrap'>
+    <div class='container'>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h1>
+            flex-wrap
+          </h1>
+          <h2>
+            Determina como os itens estarão dispostos quando o container "pai" está sem espaço
+          </h2>
+        </div>
+      </div>
+      <div class='columns show-examples'>
+        <div class='column is-12'>
+          <h3>
+            nowrap
+          </h3>
+          Valor padrão, todos os itens estarão em uma linha
+          <div class='example-content nowrap'>
+            <div *ngFor='let row of [1,2,3,4,5,6,7,8,9,10, 11, 12, 13, 14, 15, 16]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+      <div class='columns show-examples'>
+        <div class='column is-12'>
+          <h3>
+            wrap
+          </h3>
+          Quebra a linha assim que um dos flex itens não puder mais ser compactado.
+          <div class='example-content wrap'>
+            <div *ngFor='let row of [1,2,3,4,5,6,7,8,9,10, 11, 12, 13, 14, 15, 16]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+      <div class='columns show-examples'>
+        <div class='column is-12'>
+          <h3>
+            wrap-reverse
+          </h3>
+          Quebra a linha assim que um dos flex itens não puder mais ser compactado. A quebra é na direção contrária, ou
+          seja para a linha acima.
+          <div class='example-content wrap-reverse'>
+            <div *ngFor='let row of [1,2,3,4,5,6,7,8,9,10, 11, 12, 13, 14, 15, 16]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class='child examples flex-flow'>
+    <div class='container'>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h1>
+            flex-flow
+          </h1>
+          <h2>
+            Une as propriedades <strong>flex-direction</strong> e <strong>flex-wrap</strong>.
+          </h2>
+        </div>
+      </div>
+      <div class='columns show-examples'>
+        <div class='column is-12'>
+          <h3>
+            row nowrap
+          </h3>
+          Valor padrão, todos os itens estarão em uma linha
+          <div class='example-content row-nowrap'>
+            <div *ngFor='let row of [1,2,3,4,5,6,7,8,9,10, 11, 12, 13, 14, 15, 16]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='columns show-examples'>
+        <div class='column is-12'>
+          <h3>
+            row nowrap
+          </h3>
+          Valor padrão, todos os itens estarão em uma linha
+          <div class='example-content row-wrap'>
+            <div *ngFor='let row of [1,2,3,4,5,6,7,8,9,10, 11, 12, 13, 14, 15, 16]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='columns show-examples'>
+        <div class='column is-12'>
+          <h3>
+            row nowrap
+          </h3>
+          Valor padrão, todos os itens estarão em uma linha
+          <div class='example-content column-nowrap'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class='child examples justify-content'>
+    <div class='container'>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h1>
+            justify-content
+          </h1>
+          <h2>
+            Alinha os itens no container de acordo com a direção.
+          </h2>
+          <p>
+            Só funciona caso os itens atuais não ocupem todo o espaço disponível.
+          </p>
+        </div>
+      </div>
+
+      <div class='columns show-examples'>
+        <div class='column is-4'>
+          <h3>
+            flex-start
+          </h3>
+          Alnha os itens ao início do container
+          <div class='example-content flex-start'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+        <div class='column is-4'>
+          <h3>
+            flex-end
+          </h3>
+          Alinha os itens ao final do container
+          <div class='example-content flex-end'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+        <div class='column is-4'>
+          <h3>
+            center
+          </h3>
+          Alinha os itens ao centro do container
+          <div class='example-content center'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='columns show-examples'>
+        <div class='column is-4'>
+          <h3>
+            space-between
+          </h3>
+          Cria um espaçamento igual entre os elementos. Mantendo o primeiro grudado no início e o último no final.
+          <div class='example-content space-between'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+        <div class='column is-4'>
+          <h3>
+            space-around
+          </h3>
+          Cria um espaçamento entre os elementos. Os espaçamentos do meio são duas vezes maiores que o inicial e final.
+          <div class='example-content space-around'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+        <div class='column is-4'>
+          <h3>
+            space-evenly
+          </h3>
+          Os espaçamentos são iguais, independente do tamanho dos elementos
+          <div class='example-content space-evenly'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }}
+              <p *ngIf='i == 0'>
+                lorem ipsum
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='child examples justify-content-vertical'>
+    <div class='container'>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h1>
+            justify-content
+          </h1>
+          <h2>
+            Também pode ser usado para conteúdos verticais
+          </h2>
+        </div>
+      </div>
+
+      <div class='columns show-examples'>
+        <div class='column is-4'>
+          <h3>
+            flex-start
+          </h3>
+          Alnha os itens ao início do container
+          <div class='example-content flex-start'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+        <div class='column is-4'>
+          <h3>
+            flex-end
+          </h3>
+          Alinha os itens ao final do container
+          <div class='example-content flex-end'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+        <div class='column is-4'>
+          <h3>
+            center
+          </h3>
+          Alinha os itens ao centro do container
+          <div class='example-content center'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='columns show-examples'>
+        <div class='column is-4'>
+          <h3>
+            space-between
+          </h3>
+          Cria um espaçamento igual entre os elementos. Mantendo o primeiro grudado no início e o último no final.
+          <div class='example-content space-between'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+        <div class='column is-4'>
+          <h3>
+            space-around
+          </h3>
+          Cria um espaçamento entre os elementos. Os espaçamentos do meio são duas vezes maiores que o inicial e final.
+          <div class='example-content space-around'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+        <div class='column is-4'>
+          <h3>
+            space-evenly
+          </h3>
+          Os espaçamentos são iguais, independente do tamanho dos elementos
+          <div class='example-content space-around'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='child examples align-items'>
+    <div class='container'>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h1>
+            align-items
+          </h1>
+          <h2>
+            Alinha os itens de acordo com o eixo do container, sendo diferente para quando estão em colunas ou linhas
+          </h2>
+        </div>
+      </div>
+
+      <div class='columns show-examples'>
+        <div class='column is-4'>
+          <h3>
+            stretch
+          </h3>
+          Padrão, faz com que os itens cresçam igualmente.
+          <div class='example-content stretch'>
+            <div *ngFor='let row of [1,2,3]; let i = index'>
+              {{ i+1 }}
+              <p *ngIf='i == 1'>
+                lorem ipsum sit admet
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class='column is-4'>
+          <h3>
+            flex-start
+          </h3>
+          Alinha os itens ao início.
+          <div class='example-content flex-start'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+        <div class='column is-4'>
+          <h3>
+            flex-end
+          </h3>
+          Alinha os itens ao final.
+          <div class='example-content flex-end'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='columns show-examples'>
+        <div class='column is-12'>
+          <h3>
+            center
+          </h3>
+          Alinha os itens ao centro.
+          <div class='example-content center'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='child examples display'>
+    <div class='container'>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h1>
+            Trabalhar com elementos
+          </h1>
+          <h2>
+            De forma individual
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='child examples flex-grow'>
+    <div class='container'>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h1>
+            flex-grow
+          </h1>
+          <h2>
+            Define a habilidade de um item crescer.
+          </h2>
+          <p>
+            Ao definir 1 pra todos, eles tentarão ter a mesma largura e vão ocupar 100% do container - caso um dos
+            elementos tenha um conteúdo muito largo, tentará respeitar o mesmo. Agora, se temos uma linha com 4 itens,
+            onde três são flex-grow: 1 e um é flex-grow 2, esse último tentará ocupar o espaço 2 vezes maior que os
+            demais.
+          </p>
+          <p>
+            Justify-content não funciona com flex-grow definido.
+          </p>
+        </div>
+      </div>
+      <div class='columns show-examples'>
+        <div class='column is-12'>
+          <h3>
+            flex-grow igual a 0
+          </h3>
+          Obedece o width do elemento ou o flex-basis.
+          <div class='example-content flex-grow-0'>
+            <div *ngFor='let row of [1,2,3,4]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+      <div class='columns show-examples'>
+        <div class='column is-12'>
+          <h3>
+            flex-grow igual a 1
+          </h3>
+          Distribui o tamanho para todos os itens, de forma igual
+          <div class='example-content flex-grow-1'>
+            <div *ngFor='let row of [1,2,3,4]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+      <div class='columns show-examples'>
+        <div class='column is-12'>
+          <h3>
+            flex-grow igual a 1, um item com tamanho 3
+          </h3>
+          Distribui o tamanho para todos os itens, com exceção do item com tamanho "3", que é dobrado
+          <div class='example-content flex-grow-3'>
+            <div *ngFor='let row of [1,2,3,4]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+
+  <section class='child examples flex-basis'>
+    <div class='container'>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h1>
+            Flex-basis
+          </h1>
+          <h2>
+            Semelhante ao <strong>min-width</strong> fora do flexbox.
+          </h2>
+          <p>
+            Expandirá o tamanho do item baseado no conteúdo interno, se não for definido, o padrão será utilizado (0).
+            Pode ser em px, % ou qualquer outra unidade.
+          </p>
+        </div>
+      </div>
+      <div class='columns show-examples'>
+        <div class='column is-12'>
+          <h3>
+            flex-grow igual a 0
+          </h3>
+          Obedece o width do elemento ou o flex-basis.
+          <div class='example-content flex-basis-0'>
+            <div *ngFor='let row of [1,2,3,4]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+      <div class='columns show-examples'>
+        <div class='column is-12'>
+          <h3>
+            flex-basis igual a 100px
+          </h3>
+          <div class='example-content flex-basis-1'>
+            <div *ngFor='let row of [1,2,3,4]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+      <div class='columns show-examples'>
+        <div class='column is-12'>
+          <h3>
+            flex-basis igual a 10%, um item com flex-basis: 70%
+          </h3>
+          <div class='example-content flex-basis-3'>
+            <div *ngFor='let row of [1,2,3,4]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class='child examples order'>
+    <div class='container'>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h1>
+            order
+          </h1>
+          <h2>
+            Modifica a ordem dos itens, sempre do menor para o maior. Assim, <strong>order: 1</strong> aparece na frente de <strong>order: 5</strong>
+          </h2>
+        </div>
+      </div>
+      <div class='columns show-examples'>
+        <div class='column is-12'>
+          <h3>
+            Movendo segundo item para primeira posição
+          </h3>
+          <div class='example-content order-1'>
+            <div *ngFor='let row of [1,2,3,4, 5]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+      <div class='columns show-examples'>
+        <div class='column is-12'>
+          <h3>
+            Movendo o primeito item para a última posição
+          </h3>
+          <div class='example-content order-2'>
+            <div *ngFor='let row of [1,2,3,4, 5]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+      <div class='columns show-examples'>
+        <div class='column is-12'>
+          <h3>
+            Movendo o último item para a primeira posição
+          </h3>
+          <div class='example-content order-3'>
+            <div *ngFor='let row of [1,2,3,4,5]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='child examples align-self'>
+      <div class='container'>
+        <div class='columns'>
+          <div class='column is-12'>
+            <h1>
+              align-self
+            </h1>
+            <h2>
+              O align-self serve para definirmos o alinhamento específico de um único flex item dentro do nosso container.
+            </h2>
+          </div>
+        </div>
+  
+        <div class='columns show-examples'>
+          <div class='column is-4'>
+            <h3>
+              flex-start
+            </h3>
+            Alinha o item ao início
+            <div class='example-content flex-start'>
+              <div *ngFor='let row of [1,2,3]; let i = index'>
+                {{ i+1 }}
+              </div>
+            </div>
+          </div>
+          <div class='column is-4'>
+            <h3>
+              flex-end
+            </h3>
+            Alinha o item ao final
+            <div class='example-content flex-end'>
+              <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+            </div>
+          </div>
+          <div class='column is-4'>
+            <h3>
+              center
+            </h3>
+            Alinha o item ao centro
+            <div class='example-content center'>
+              <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class='columns show-examples'>
+          <div class='column is-12'>
+            <h3>
+              stretch
+            </h3>
+            Estica o item 
+            <div class='example-content stretch'>
+              <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 </div>
