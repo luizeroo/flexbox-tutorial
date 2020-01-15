@@ -29,6 +29,7 @@ body {
     }
 
     &#intro,
+    &#end,
     &#examples {
         * {
             text-align: center;
@@ -150,6 +151,16 @@ body {
         align-items: center;
 
         .container {
+            a {
+                text-decoration: none;
+            }
+            .content {
+                .is-2 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
             >div {
                 margin: 10vh 0;
 
@@ -699,6 +710,19 @@ body {
             }
         }
     }
+
+    &.references {
+        .frog {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            i, svg {
+                font-size: 45px;
+                animation: highlight ease-in-out 1s infinite alternate;
+            }
+        }
+    }
 }
 
 
@@ -746,4 +770,21 @@ body {
 ul {
     list-style: initial;
     padding: 10px 0;
+}
+
+.link-to-flexbox-repository {
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    z-index: 1;
+    transition: .3s;
+    * {
+        color: #fff;
+    }
+    i, svg {
+        font-size: 30px;
+    }
+    &:hover {
+        transform: scale(1.1)
+    }
 }

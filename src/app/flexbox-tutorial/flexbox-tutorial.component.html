@@ -1,3 +1,8 @@
+<div class='link-to-flexbox-repository '>
+  <a href='https://github.com/luizeroo/flexbox' target='_blank'>
+    <i class="fab fa-github"></i>
+  </a>
+</div>
 <div class='wrapper'>
   <section class='child' id='intro'>
     <div>
@@ -20,12 +25,11 @@
       <h1>
         Flexbox Tutorial <br> Workshop
       </h1>
-      <h2>
-        Luizero
-      </h2>
-      <p>
-        https://github.com/luizeroo/flexbox
-      </p>
+      <a href='https://github.com/luizeroo' target='_blank'>
+        <h2>
+          Luizero
+        </h2>
+      </a>
     </div>
   </section>
   <section class='child'>
@@ -45,8 +49,9 @@
           </p>
         </div>
       </div>
-      <div class='columns'>
-        <div class='column is-10'>
+      <a href='https://medium.com/@lucashenriquedeabreu/flexbox-layout-a2ab0f0a2f86' target='_blank'>
+        <div class='columns content'>
+        <div class='column is-9'>
           <q cite='https://medium.com/@lucashenriquedeabreu/flexbox-layout-a2ab0f0a2f86'>
             Flexbox tem por objetivo fornecer uma forma mais fácil e objetiva de alinhar e distribuir os objetos dentro
             de um container, sempre levando em consideração que o tamanho pode ser ou não desconhecido.
@@ -59,6 +64,7 @@
           <i class="fab fa-medium"></i>
         </div>
       </div>
+    </a>
     </div>
   </section>
   <section class='child'>
@@ -236,16 +242,17 @@
             Links recomendáveis
           </h3>
           <ul>
-            <a href='https://bulma.io' title='Visitar site oficial'>
+            <a target='_blank' href='https://bulma.io' title='Visitar site oficial'>
               <li> Site oficial </li>
             </a>
-            <a href='https://www.npmjs.com/package/bulma' title='Visitar NPMJS Bulma'>
+            <a target='_blank' href='https://www.npmjs.com/package/bulma' title='Visitar NPMJS Bulma'>
               <li> NPM Bulma </li>
             </a>
-            <a href='https://bulmatemplates.github.io/bulma-templates/' title='Conferir templates já feitos'>
+            <a target='_blank' href='https://bulmatemplates.github.io/bulma-templates/'
+              title='Conferir templates já feitos'>
               <li> Templates </li>
             </a>
-            <a href='https://github.com/jgthms/bulma/releases/download/0.8.0/bulma-0.8.0.zip'
+            <a target='_blank' href='https://github.com/jgthms/bulma/releases/download/0.8.0/bulma-0.8.0.zip'
               title='Baixar versão do Bulma (v0.8.0)'>
               <li> Baixar versão </li>
             </a>
@@ -776,7 +783,7 @@
             flex-grow
           </h1>
           <h2>
-            Define a habilidade de um item crescer.
+            Define a target='_blank' habilidade de um item crescer.
           </h2>
           <p>
             Ao definir 1 pra todos, eles tentarão ter a mesma largura e vão ocupar 100% do container - caso um dos
@@ -825,7 +832,7 @@
     </div>
   </section>
 
- 
+
 
 
   <section class='child examples flex-basis'>
@@ -887,7 +894,8 @@
             order
           </h1>
           <h2>
-            Modifica a ordem dos itens, sempre do menor para o maior. Assim, <strong>order: 1</strong> aparece na frente de <strong>order: 5</strong>
+            Modifica a ordem dos itens, sempre do menor para o maior. Assim, <strong>order: 1</strong> aparece na frente
+            de <strong>order: 5</strong>
           </h2>
         </div>
       </div>
@@ -925,62 +933,136 @@
   </section>
 
   <section class='child examples align-self'>
-      <div class='container'>
-        <div class='columns'>
-          <div class='column is-12'>
-            <h1>
-              align-self
-            </h1>
-            <h2>
-              O align-self serve para definirmos o alinhamento específico de um único flex item dentro do nosso container.
-            </h2>
-          </div>
+    <div class='container'>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h1>
+            align-self
+          </h1>
+          <h2>
+            O align-self serve para definirmos o alinhamento específico de um único flex item dentro do nosso container.
+          </h2>
         </div>
-  
-        <div class='columns show-examples'>
-          <div class='column is-4'>
-            <h3>
-              flex-start
-            </h3>
-            Alinha o item ao início
-            <div class='example-content flex-start'>
-              <div *ngFor='let row of [1,2,3]; let i = index'>
-                {{ i+1 }}
-              </div>
-            </div>
-          </div>
-          <div class='column is-4'>
-            <h3>
-              flex-end
-            </h3>
-            Alinha o item ao final
-            <div class='example-content flex-end'>
-              <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
-            </div>
-          </div>
-          <div class='column is-4'>
-            <h3>
-              center
-            </h3>
-            Alinha o item ao centro
-            <div class='example-content center'>
-              <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+      </div>
+
+      <div class='columns show-examples'>
+        <div class='column is-4'>
+          <h3>
+            flex-start
+          </h3>
+          Alinha o item ao início
+          <div class='example-content flex-start'>
+            <div *ngFor='let row of [1,2,3]; let i = index'>
+              {{ i+1 }}
             </div>
           </div>
         </div>
-  
-        <div class='columns show-examples'>
-          <div class='column is-12'>
-            <h3>
-              stretch
-            </h3>
-            Estica o item 
-            <div class='example-content stretch'>
-              <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
-            </div>
+        <div class='column is-4'>
+          <h3>
+            flex-end
+          </h3>
+          Alinha o item ao final
+          <div class='example-content flex-end'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+        <div class='column is-4'>
+          <h3>
+            center
+          </h3>
+          Alinha o item ao centro
+          <div class='example-content center'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
           </div>
         </div>
       </div>
-    </section>
 
+      <div class='columns show-examples'>
+        <div class='column is-12'>
+          <h3>
+            stretch
+          </h3>
+          Estica o item
+          <div class='example-content stretch'>
+            <div *ngFor='let row of [1,2,3]; let i = index'> {{ i+1 }} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class='child references '>
+    <div class='container'>
+      <div class='columns'>
+        <div class='column is-12'>
+          <h1>
+            Referências e Recomendações de Leitura
+          </h1>
+          <p>
+            Vários artigos foram usados como base para a criação de todo o material. Existem outras propriedades do
+            Flexbox, mais especificas para contextos de edição, mas que não costumam ser tão utilizadas quanto as
+            apresentadas. Vou estar disponibilizando alguns links:
+          </p>
+        </div>
+      </div>
+      <div class='columns'>
+        <div class='column is-6'>
+          <h2>
+            Links recomendáveis
+          </h2>
+          <ul>
+            <a target='_blank' href='https://brolik.com/blog/when-to-use-flexbox/'>
+              <li> When to use flexbox, do site Brolik </li>
+            </a>
+            <a target='_blank' href='https://guilhermemuller.com.br/ead/html-css-na-pratica/elementos-bloco-em-linha'>
+              <li> Elementos de Bloco e Em Linha </li>
+            </a>
+            <a target='_blank' href='https://medium.com/@lucashenriquedeabreu/flexbox-layout-a2ab0f0a2f86'>
+              <li> Flexbox Layout, texto por Lucas Henrique de Abreu </li>
+            </a>
+            <a target='_blank' href='https://github.com/jgthms/bulma/releases/download/0.8.0/bulma-0.8.0.zip'
+              title='Baixar versão do Bulma (v0.8.0)'>
+              <li> The Complete CSS Flex Box Tutorial </li>
+            </a>
+          </ul>
+        </div>
+        <div class='column is-6 frog'>
+          <h2>
+            Desafio
+          </h2>
+          <a target='_blank' href='http://flexboxfroggy.com'><i class="fas fa-frog"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class='child' id='end'>
+    <div>
+      <div class='logo'>
+        <div class='line columns'>
+          <div class='column is-4'></div>
+          <div class='column is-4'></div>
+          <div class='column is-4'></div>
+        </div>
+        <div class='line columns'>
+          <div class='column is-8'></div>
+          <div class='column is-3'></div>
+        </div>
+        <div class='line columns'>
+          <div class='column is-3'></div>
+          <div class='column is-8'></div>
+        </div>
+        <div class='animation'></div>
+      </div>
+      <h1>
+        Flexbox Tutorial
+      </h1>
+      <h2>
+        Obrigado pela visita :)
+      </h2>
+      <a href='https://github.com/luizeroo' target='_blank'>
+        <h2>
+          Luizero
+        </h2>
+      </a>
+    </div>
+  </section>
 </div>
