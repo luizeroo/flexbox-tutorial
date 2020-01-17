@@ -3,13 +3,16 @@ body {
     overflow: hidden;
 }
 
-.menu-of-items, .child {
+.menu-of-items,
+.child {
     .header {
         display: flex;
         justify-content: space-between;
+
         * {
             color: #fff;
         }
+
         .close-menu {
             cursor: pointer;
         }
@@ -23,27 +26,32 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    z-index:100;
+    z-index: 100;
     padding: 10px;
+
     h1 {
         font-size: 24px;
         color: #fff;
         font-weight: 600;
     }
+
     ul {
-        overflow: auto; 
+        overflow: auto;
         height: calc(100vh - 50px);
+
         li {
             padding: 10px 0;
             transition: .3s;
             color: #fff;
-            cursor:pointer;
+            cursor: pointer;
+
             &:hover {
                 padding-left: 10px;
             }
         }
     }
 }
+
 .wrapper {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -192,10 +200,10 @@ body {
         align-items: center;
 
         .container {
-            a {
+
+            .flexbox-medium {
                 text-decoration: none;
             }
-
             .content {
                 .is-2 {
                     display: flex;
@@ -329,7 +337,12 @@ body {
             margin: 20px 0;
         }
     }
+}
 
+// flexbox examples
+.wrapper {
+    .child {
+// How to use 'display'
     &.display {
         .container>.columns {
             justify-content: space-between
@@ -358,6 +371,7 @@ body {
         }
     }
 
+// How to use 'flex-direction'
     &.flex-direction {
         .show-examples {
             .example-content {
@@ -395,6 +409,7 @@ body {
         }
     }
 
+// How to use 'flex-wrap'
     &.flex-wrap {
         .is-12 {
             padding: 0;
@@ -432,6 +447,7 @@ body {
         }
     }
 
+// How to use 'flex-flow'
     &.flex-flow {
         .is-12 {
             padding: 0;
@@ -469,6 +485,7 @@ body {
         }
     }
 
+// How to use 'justify-content'
     &.justify-content {
         .is-12 {
             padding: 0;
@@ -523,6 +540,7 @@ body {
         }
     }
 
+// How to use vertical 'justify-content'
     &.justify-content-vertical {
         .column {
             padding-top: 5px;
@@ -580,6 +598,7 @@ body {
         }
     }
 
+// How to use 'align-items'
     &.align-items {
         .is-12 {
             padding: 0;
@@ -639,8 +658,7 @@ body {
         }
     }
 
-
-
+// How to use 'flex-grow'
     &.flex-grow {
         .is-12 {
             padding: 0;
@@ -690,6 +708,7 @@ body {
         }
     }
 
+// How to use 'flex-basis'
     &.flex-basis {
         .is-12 {
             padding: 0;
@@ -739,6 +758,7 @@ body {
         }
     }
 
+// How to use 'order'
     &.order {
         .is-12 {
             padding: 0;
@@ -797,6 +817,7 @@ body {
         }
     }
 
+// How to use 'align-self'
     &.align-self {
         .is-12 {
             padding: 0;
@@ -884,6 +905,7 @@ body {
         }
     }
 }
+}
 
 
 @keyframes blink {
@@ -892,7 +914,7 @@ body {
     }
 
     100% {
-        filter: saturate(300%)
+        filter: saturate(500%)
     }
 }
 
@@ -954,7 +976,7 @@ ul {
     }
 }
 
-.open-menu{
+.open-menu {
     position: fixed;
     left: 20px;
     top: 10px;

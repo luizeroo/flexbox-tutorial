@@ -8,12 +8,12 @@
 </div>
 <div class='menu-of-items' *ngIf='showMenu'>
   <div class='header'>
-      <h1>
-          Navegar para
-        </h1>
-        <p (click)='toggleMenu()' class='close-menu'>
-          Fechar
-        </p>
+    <h1>
+      Navegar para
+    </h1>
+    <p (click)='toggleMenu()' class='close-menu'>
+      Fechar
+    </p>
   </div>
   <ul>
     <li *ngFor='let link of links' (click)='goToLink(link.id); toggleMenu()'>
@@ -61,13 +61,13 @@
             O módulo Flexbox é uma recomendação da W3C - é a principal organização de padronização da World Wide Web
             (WWW) - desde outubro de 2017 e atualmente é utilizado em maior parte dos navegadores modernos, porém, sendo
             apenas
-            parcialmente usado no IE9 e I10. Sua taxa de uso nos <strong>navegadores é de 98% de implementação </strong>
+            parcialmente usado no IE9 e I10. Sua taxa de uso nos <a href='https://caniuse.com/#feat=flexbox' target='_blank'><strong>navegadores é de 98% de implementação </strong></a>
             -
-            enquanto o <strong>"CSS Grid"</strong> bate os 93%.
+            enquanto o <a href='https://caniuse.com/#feat=css-grid' target='_blank'><strong>"CSS Grid"</strong></a> bate os 93%.
           </p>
         </div>
       </div>
-      <a href='https://medium.com/@lucashenriquedeabreu/flexbox-layout-a2ab0f0a2f86' target='_blank'>
+      <a href='https://medium.com/@lucashenriquedeabreu/flexbox-layout-a2ab0f0a2f86' target='_blank' class='flexbox-medium'>
         <div class='columns content'>
           <div class='column is-10'>
             <q cite='https://medium.com/@lucashenriquedeabreu/flexbox-layout-a2ab0f0a2f86'>
@@ -137,7 +137,6 @@
       </div>
     </div>
   </section>
-
   <section class='child' id='examples-flexbox'>
     <div class='container'>
       <div class='columns'>
@@ -273,10 +272,6 @@
               title='Conferir templates já feitos'>
               <li> Templates </li>
             </a>
-            <a target='_blank' href='https://github.com/jgthms/bulma/releases/download/0.8.0/bulma-0.8.0.zip'
-              title='Baixar versão do Bulma (v0.8.0)'>
-              <li> Baixar versão </li>
-            </a>
           </ul>
         </div>
       </div>
@@ -348,7 +343,8 @@
       </div>
     </div>
   </section>
-
+  
+  <!-- How to use Display -->
   <section class='child examples display' id='display'>
     <div class='container'>
       <div class='columns'>
@@ -388,6 +384,7 @@
     </div>
   </section>
 
+  <!-- How to use flex-direction -->
   <section class='child examples flex-direction' id='flex-direction'>
     <div class='container'>
       <div class='columns'>
@@ -459,6 +456,7 @@
     </div>
   </section>
 
+  <!-- How to use flex-wrap -->
   <section class='child examples flex-wrap' id='flex-wrap'>
     <div class='container'>
       <div class='columns'>
@@ -508,7 +506,7 @@
     </div>
   </section>
 
-
+  <!-- How to use flex-flow -->
   <section class='child examples flex-flow' id='flex-flow'>
     <div class='container'>
       <div class='columns'>
@@ -559,6 +557,7 @@
     </div>
   </section>
 
+  <!-- How to use justify-content -->
   <section class='child examples justify-content' id='justify-content'>
     <div class='container'>
       <div class='columns'>
@@ -642,6 +641,7 @@
     </div>
   </section>
 
+  <!-- How to use vertical 'justify-content' -->
   <section class='child examples justify-content-vertical' id='justify-content-vertical'>
     <div class='container'>
       <div class='columns'>
@@ -717,6 +717,7 @@
     </div>
   </section>
 
+  <!-- How to use align-items-->
   <section class='child examples align-items' id='align-items'>
     <div class='container'>
       <div class='columns'>
@@ -794,6 +795,7 @@
     </div>
   </section>
 
+  <!-- How to use flex-grow -->
   <section class='child examples flex-grow' id='flex-grow'>
     <div class='container'>
       <div class='columns'>
@@ -848,6 +850,8 @@
       </div>
     </div>
   </section>
+
+  <!-- How to use flex-basis -->
   <section class='child examples flex-basis' id='flex-basis'>
     <div class='container'>
       <div class='columns'>
@@ -898,6 +902,7 @@
     </div>
   </section>
 
+  <!-- How to use order -->
   <section class='child examples order' id='order'>
     <div class='container'>
       <div class='columns'>
@@ -947,6 +952,7 @@
     </div>
   </section>
 
+  <!-- How to use align-self -->
   <section class='child examples align-self' id='align-self'>
     <div class='container'>
       <div class='columns'>
@@ -1005,6 +1011,7 @@
       </div>
     </div>
   </section>
+
   <section class='child references ' id='references'>
     <div class='container'>
       <div class='columns'>
@@ -1057,6 +1064,7 @@
       </div>
     </div>
   </section>
+
   <section class='child' id='end'>
     <div>
       <div class='logo'>
