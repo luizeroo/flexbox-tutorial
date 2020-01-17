@@ -908,6 +908,7 @@ body {
 }
 
 
+// blink animation
 @keyframes blink {
     0% {
         filter: saturate(100%)
@@ -918,6 +919,8 @@ body {
     }
 }
 
+
+// spin-square animation
 @keyframes spin-square {
 
     0% {
@@ -929,6 +932,7 @@ body {
     }
 }
 
+// highlight (icon) animation
 @keyframes highlight {
 
     0% {
@@ -940,6 +944,7 @@ body {
     }
 }
 
+// reset / default / links styles
 * {
 
     span,
